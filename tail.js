@@ -9,9 +9,6 @@ const assertEqual = function(actual, expected) {
 const tail = function(array) {
   return array.slice(1);
 };
-assertEqual(tail([5, 6, 7]), 5);
-assertEqual(tail(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(tail([]), 5);
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result.length, 2); // ensure we get back two elements
@@ -21,3 +18,5 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
 assertEqual(words.length, 3); // original array should still have 3 elements!
+
+assertEqual(tail([0,2,5]),[2,5])
