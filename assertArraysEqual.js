@@ -1,22 +1,5 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed:${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed:${actual} !== ${expected}`);
-  }
-}; 
+const eqArrays = require("./eqArrays");
 
-const eqArrays = function (a,b){ 
-  if (a.length !== b.length){ 
-   return false
-  } 
-   for (let i = 0; i < a.length; i++){ 
-      if ( a[i] !== b[i] ){ 
-       return false
-      }
- } 
- return true
- }  
 
  const assertArraysEqual = function (a,b){ 
   if (eqArrays(a,b)) { 
@@ -26,9 +9,6 @@ const eqArrays = function (a,b){
   } 
 } 
 
-assertArraysEqual([1, 2, 3],[1, 2, 3]); 
+module.exports = assertArraysEqual
 
-const assertArraysareEqual = function (a,b){ 
-  return assertEqual(eqArrays(a,b),true)
-}  
-assertArraysareEqual([1, 2, 3],[1, 2, 3]); 
+
